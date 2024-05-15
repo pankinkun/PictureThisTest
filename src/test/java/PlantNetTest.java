@@ -37,369 +37,368 @@ public class PlantNetTest {
     // --------- CAMERA ---------
 
     @Test
-    public void testI2_10() throws InterruptedException {
-        System.out.println("Test I2.10");
-        upload(2, 1, "leaf");
-        String plantName = driver.findElement(By.id("00000000-0000-0df6-ffff-ffff00000298")).getText();
+    public void testI2_1() throws InterruptedException {
+        System.out.println("Test I2.1");
+        upload(2, 1,  "bark");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Cassava\"]")).getText();
+        verify(plantName, "Apple Plant");
+    }
+
+    @Test
+    public void testC4_5() throws InterruptedException {
+        System.out.println("Test C4.5");
+        upload(2, 2, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Hybrid cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC4_6() throws InterruptedException {
+        System.out.println("Test C4.6");
+        upload(2, 3, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Fragile oat\"]")).getText();
         verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testC4_8() throws InterruptedException {
+        System.out.println("Test C4.8");
+        upload(2, 4, "flower");
+        String plantName = driver.findElement(By.xpath("///android.widget.TextView[@text=\"Japanese flowering cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC4_3() throws InterruptedException {
+        System.out.println("Test C4.3");
+        upload(2, 5, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI2_2() throws InterruptedException {
+        System.out.println("Test I2.2");
+        upload(2, 6, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Apple Plant");
+    }
+
+    @Test
+    public void testI1_3() throws InterruptedException {
+        System.out.println("Test I1.3");
+        upload(2, 7, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sargent's cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
     }
 
     @Test
     public void testI2_7() throws InterruptedException {
         System.out.println("Test I2.7");
-        upload(2, 2, "flower");
-        String plantName = driver.findElement(By.id("00000000-0000-0df6-ffff-ffff00000298")).getText();
+        upload(2, 8, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Japanese flowering cherry\"]")).getText();
         verify(plantName, "Cherry Blossom");
     }
 
-//    @Test
-//    public void testI3_5() throws InterruptedException {
-//        System.out.println("Test I3.5");
-//        upload(1, 3);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI2_6() throws InterruptedException {
-//        System.out.println("Test I2.6");
-//        upload(1, 4);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI3_1() throws InterruptedException {
-//        System.out.println("Test I3.1");
-//        upload(1, 5);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testI3_10() throws InterruptedException {
-//        System.out.println("Test I3.10");
-//        upload(1, 6);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI1_6() throws InterruptedException {
-//        System.out.println("Test I1.6");
-//        upload(1, 7);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI1_3() throws InterruptedException {
-//        System.out.println("Test I1.3");
-//        upload(1, 8);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testI3_12() throws InterruptedException {
-//        System.out.println("Test I3.12");
-//        upload(1, 9);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI2_4() throws InterruptedException {
-//        System.out.println("Test I2.4");
-//        upload(1, 10);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testI2_11() throws InterruptedException {
-//        System.out.println("Test I2.11");
-//        upload(1, 11);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI2_5() throws InterruptedException {
-//        System.out.println("Test I2.5");
-//        upload(1, 12);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI2_12() throws InterruptedException {
-//        System.out.println("Test I2.12");
-//        upload(1, 13);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI1_1() throws InterruptedException {
-//        System.out.println("Test I1.1");
-//        upload(1, 14);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView")).getText();
-//        verify(plantName, "Not a plant");
-//    }
-//
-//    @Test
-//    public void testI1_7() throws InterruptedException {
-//        System.out.println("Test I1.7");
-//        upload(1, 15);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//
-//    // --------- SCREENSHOTS ---------
-//
-//    @Test
-//    public void testC2_3() throws InterruptedException {
-//        System.out.println("Test C2.3");
-//        upload(2, 1);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testC4_2() throws InterruptedException {
-//        System.out.println("Test C4.2");
-//        upload(2, 2);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC4_8() throws InterruptedException {
-//        System.out.println("Test C4.8");
-//        upload(2, 3);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC2_6() throws InterruptedException {
-//        System.out.println("Test C2.6");
-//        upload(2, 4);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testC3_3() throws InterruptedException {
-//        System.out.println("Test C3.3");
-//        upload(2, 5);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testC2_2() throws InterruptedException {
-//        System.out.println("Test C2.2");
-//        upload(2, 6);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC4_10() throws InterruptedException {
-//        System.out.println("Test C4.10");
-//        upload(2, 7);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC4_5() throws InterruptedException {
-//        System.out.println("Test C4.5");
-//        upload(2, 8);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC1_1() throws InterruptedException {
-//        System.out.println("Test C1.1");
-//        upload(2, 9);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC4_7() throws InterruptedException {
-//        System.out.println("Test C4.7");
-//        upload(2, 10);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC4_6() throws InterruptedException {
-//        System.out.println("Test C4.6");
-//        upload(2, 11);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testC4_9() throws InterruptedException {
-//        System.out.println("Test C4.9");
-//        upload(2, 12);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI2_2() throws InterruptedException {
-//        System.out.println("Test I2.2");
-//        upload(2, 13);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testI1_5() throws InterruptedException {
-//        System.out.println("Test I1.5");
-//        upload(2, 14);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI2_1() throws InterruptedException {
-//        System.out.println("Test I2.1");
-//        upload(2, 15);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    // --------- DOWNLOADS ---------
-//
-//    @Test
-//    public void testI3_9() throws InterruptedException {
-//        System.out.println("Test I3.9");
-//        upload(3, 1);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testC1_2() throws InterruptedException {
-//        System.out.println("Test C1.2");
-//        upload(3, 2);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI3_3() throws InterruptedException {
-//        System.out.println("Test I3.3");
-//        upload(3, 3);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testI3_8() throws InterruptedException {
-//        System.out.println("Test I3.8");
-//        upload(3, 4);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI3_7() throws InterruptedException {
-//        System.out.println("Test I3.7");
-//        upload(3, 5);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC3_2() throws InterruptedException {
-//        System.out.println("Test C3.2");
-//        upload(3, 6);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC2_5() throws InterruptedException {
-//        System.out.println("Test C2.5");
-//        upload(3, 7);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testC1_3() throws InterruptedException {
-//        System.out.println("Test C1.3");
-//        upload(3, 8);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Paddy Plant");
-//    }
-//
-//    @Test
-//    public void testC4_1() throws InterruptedException {
-//        System.out.println("Test C4.1");
-//        upload(3, 9);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC1() throws InterruptedException {
-//        System.out.println("Test C1");
-//        upload(3, 10);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC2_1() throws InterruptedException {
-//        System.out.println("Test C2.1");
-//        upload(3, 11);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC4_4() throws InterruptedException {
-//        System.out.println("Test C4.4");
-//        upload(3, 12);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC4_12() throws InterruptedException {
-//        System.out.println("Test C4.12");
-//        upload(3, 13);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Apple Tree");
-//    }
-//
-//    @Test
-//    public void testC2() throws InterruptedException {
-//        System.out.println("Test C2");
-//        upload(3, 14);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
-//
-//    @Test
-//    public void testI3_6() throws InterruptedException {
-//        System.out.println("Test I3.6");
-//        upload(3, 15);
-//        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.myplantin.app:id/tvPlantName\"]")).getText();
-//        verify(plantName, "Cherry Blossom");
-//    }
+    @Test
+    public void testC4_12() throws InterruptedException {
+        System.out.println("Test C4.12");
+        upload(2, 9, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI2_5() throws InterruptedException {
+        System.out.println("Test I2.5");
+        upload(2, 10,  "bark");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Smyrna Tamarisk\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC4_7() throws InterruptedException {
+        System.out.println("Test C4.7");
+        upload(2, 11, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testI2_12() throws InterruptedException {
+        System.out.println("Test I2.12");
+        upload(2, 12, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI1_4() throws InterruptedException {
+        System.out.println("Test I1.4");
+        upload(2, 13, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI2_6() throws InterruptedException {
+        System.out.println("Test I2.6");
+        upload(2, 14, "bark");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sargent's cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testI2_10() throws InterruptedException {
+        System.out.println("Test I2.10");
+        upload(2, 15, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"African rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    // --------- SCREENSHOTS ---------
+
+    @Test
+    public void testC2_4() throws InterruptedException {
+        System.out.println("Test C2.4");
+        upload(4, 1, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Chinese Pearleaf Crabapple\"]")).getText();
+        verify(plantName, "Apple Plant");
+    }
+
+    @Test
+    public void testC2_2() throws InterruptedException {
+        System.out.println("Test C2.2");
+        upload(4, 2, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sargent's cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC2_1() throws InterruptedException {
+        System.out.println("Test C2.1");
+        upload(4, 3, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sargent's cherry\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC2_3() throws InterruptedException {
+        System.out.println("Test C2.3");
+        upload(4, 4, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testC2_5() throws InterruptedException {
+        System.out.println("Test C2.5");
+        upload(4, 5, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Spring cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC1_1() throws InterruptedException {
+        System.out.println("Test C1.1");
+        upload(4, 6, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Siberian crab apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC2_6() throws InterruptedException {
+        System.out.println("Test C2.6");
+        upload(4, 7, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"African rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI3_6() throws InterruptedException {
+        System.out.println("Test I3.6");
+        upload(4, 8, "bark");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sour cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void test1() throws InterruptedException {
+        System.out.println("Test 1");
+        upload(4, 9, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC4_4() throws InterruptedException {
+        System.out.println("Test C4.4");
+        upload(4, 10, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Siberian crab apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC3_1() throws InterruptedException {
+        System.out.println("Test C3.1");
+        upload(4, 11, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC4_2() throws InterruptedException {
+        System.out.println("Test C4.2");
+        upload(4, 12, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Spring cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testI1_1() throws InterruptedException {
+        System.out.println("Test I1.1");
+        upload(4, 13, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Not a plant.\"]")).getText();
+        verify(plantName, "Not a plant");
+    }
+
+    @Test
+    public void testI2_11() throws InterruptedException {
+        System.out.println("Test I2.11");
+        upload(4, 14, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Cock's-foot\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI2_4() throws InterruptedException {
+        System.out.println("Test I2.4");
+        upload(4, 15, "bark");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Japanese Crab Apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    // --------- DOWNLOADS ---------
+
+    @Test
+    public void testC4_1() throws InterruptedException {
+        System.out.println("Test C4.1");
+        upload(5, 1, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Crab apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testI1_2() throws InterruptedException {
+        System.out.println("Test I1.2");
+        upload(5, 2, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testI3_1() throws InterruptedException {
+        System.out.println("Test I3.1");
+        upload(5, 3, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Chinese bush cherry\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC4_10() throws InterruptedException {
+        System.out.println("Test C4.10");
+        upload(5, 4, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Paradise Apple\"]")).getText();
+        verify(plantName, "Apple Tree");
+    }
+
+    @Test
+    public void testC4_9() throws InterruptedException {
+        System.out.println("Test C4.9");
+        upload(5, 5, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void test2() throws InterruptedException {
+        System.out.println("Test 2");
+        upload(5, 6, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Japanese flowering cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC3_2() throws InterruptedException {
+        System.out.println("Test C3.2");
+        upload(5, 7, "flower");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Spring cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testC3_3() throws InterruptedException {
+        System.out.println("Test C3.3");
+        upload(5, 8, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void test3() throws InterruptedException {
+        System.out.println("Test 3");
+        upload(5, 9, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"African rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI3_5() throws InterruptedException {
+        System.out.println("Test I3.5");
+        upload(5, 10, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Wild Cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testI3_4() throws InterruptedException {
+        System.out.println("Test I3.4");
+        upload(5, 11, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Bird Cherry\"]")).getText();
+        verify(plantName, "Cherry Blossom");
+    }
+
+    @Test
+    public void testI3_8() throws InterruptedException {
+        System.out.println("Test I3.8");
+        upload(5, 12, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI3_9() throws InterruptedException {
+        System.out.println("Test I3.9");
+        upload(5, 13, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testI3_7() throws InterruptedException {
+        System.out.println("Test I3.7");
+        upload(5, 14, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
+
+    @Test
+    public void testC1_3() throws InterruptedException {
+        System.out.println("Test C1.3");
+        upload(5, 15, "leaf");
+        String plantName = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Lowland rice\"]")).getText();
+        verify(plantName, "Paddy Plant");
+    }
 
     @After
     public void tearDown() {
@@ -427,7 +426,7 @@ public class PlantNetTest {
     public void startApp() throws InterruptedException {
         Thread.sleep(3000);
         clickElement("//android.widget.TextView[@text=\"Skip\"]");
-        Thread.sleep(2000);
+        Thread.sleep(6000);
         clickElement("//android.widget.TextView[@text=\"Skip\"]");
         Thread.sleep(1000);
         clickElement("//android.view.ViewGroup[@content-desc=\"Gallery\"]");
